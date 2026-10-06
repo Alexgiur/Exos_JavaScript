@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Pierre, Feuille, Ciseaux</title>
+</head>
+<body>
+    <h1>Pierre, Feuille, Ciseaux</h1>
+    <button id="pierre">Pierre</button>
+    <button id="feuille">Feuille</button>
+    <button id="ciseaux">Ciseaux</button>
+</body>
+<script>
+    let choix = ["pierre", "feuille", "ciseaux"];
+    let choixPC = Math.random(choix);
+    let choixUti = "";
+
+    if (choixPC < 0.3333333333333) {
+        choixPC = "pierre";
+    } else if (choixPC < 0.6666666666666) {
+        choixPC = "feuille";
+    } else {
+        choixPC = "ciseaux";
+    }
+
+    let pierre = document.getElementById("pierre");
+    pierre.addEventListener("click", function() {
+        choixUti = "pierre";
+        console.log(choixUti)
+    })
+
+    let feuille = document.getElementById("feuille");
+    feuille.addEventListener("click", function() {
+        choixUti = "feuille";
+        console.log(choixUti)
+    })
+
+    let ciseaux = document.getElementById("ciseaux");
+    ciseaux.addEventListener("click", function() {
+        choixUti = "ciseaux";
+        console.log(choixUti)
+    })
+
+    
+    //console.log(choixUti)
+    console.log(choixPC);
+</script>
+</html>
+
