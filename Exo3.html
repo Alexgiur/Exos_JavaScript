@@ -11,9 +11,13 @@
     <button id="feuille">Feuille</button>
     <button id="ciseaux">Ciseaux</button>
     <div id="resultat"></div>
+    <div id="score"></div>
 </body>
 <script>
     let resultat = document.getElementById("resultat");
+    let score = document.getElementById("score");
+    let scorePC = 0;
+    let scoreUti = 0;
 
     function jouer(choixUti) {
         let choix = ["pierre", "feuille", "ciseaux"];
@@ -27,6 +31,27 @@
         } else {
             choixPC = "ciseaux";
         }
+
+        if (choixPC == "pierre" & choixUti == "feuille") {
+            scoreUti += 1; 
+        }
+        if (choixPC == "pierre" & choixUti == "ciseaux") {
+            scorePC += 1;
+        }
+        if (choixPC == "feuille" & choixUti == "pierre") {
+            scorePC += 1; 
+        }
+        if (choixPC == "feuille" & choixUti == "ciseaux") {
+            scoreUti += 1;
+        }
+        if (choixPC == "ciseaux" & choixUti == "pierre") {
+            scoreUti += 1; 
+        }
+        if (choixPC == "ciseaux" & choixUti == "feuille") {
+            scorePC += 1;
+        }
+        
+        score.textContent = scorePC + " vs " + scoreUti;
         resultat.textContent = choixPC + " vs " + choixUti;
     }
 
