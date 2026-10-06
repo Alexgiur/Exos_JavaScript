@@ -1,15 +1,23 @@
 body {
     background-color: lightgreen;
+    margin : 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'OCR A Std', monospace;
 }
 
 h1 {
     display: flex;
     justify-content: center;
+    color: white;
+}
+
+.titre {
+    background-color: rgb(35, 92, 35);
+    width: 100%;
 }
 
 h2 {
