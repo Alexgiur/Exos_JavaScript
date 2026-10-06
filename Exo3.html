@@ -1,0 +1,50 @@
+<!-- Exercice 3 -->
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Pierre, Feuille, Ciseaux</title>
+</head>
+<body>
+    <h1>Pierre, Feuille, Ciseaux</h1>
+    <button id="pierre">Pierre</button>
+    <button id="feuille">Feuille</button>
+    <button id="ciseaux">Ciseaux</button>
+    <div id="resultat"></div>
+</body>
+<script>
+    let resultat = document.getElementById("resultat");
+
+    function jouer(choixUti) {
+        let choix = ["pierre", "feuille", "ciseaux"];
+        let choixPC = Math.random();
+        
+
+        if (choixPC < 0.3333333333333) {
+            choixPC = "pierre";
+        } else if (choixPC < 0.6666666666666) {
+            choixPC = "feuille";
+        } else {
+            choixPC = "ciseaux";
+        }
+        resultat.textContent = choixPC + " vs " + choixUti;
+    }
+
+
+    let pierre = document.getElementById("pierre");
+    pierre.addEventListener("click", function() {
+        jouer("pierre");
+    })
+
+    let feuille = document.getElementById("feuille");
+    feuille.addEventListener("click", function() {
+        jouer("feuille");
+    })
+
+    let ciseaux = document.getElementById("ciseaux");
+    ciseaux.addEventListener("click", function() {
+        jouer("ciseaux")
+    })
+
+</script>
+</html>
