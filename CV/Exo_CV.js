@@ -10,6 +10,21 @@ fetch("profil.json")
     ressources.id = "ressources";
     document.getElementById("cv").appendChild(ressources);
     ressources.textContent = github.login;
+
+    const imgGit = document.createElement("img");
+    document.getElementById("cv").appendChild(imgGit);
+    imgGit.id = "imgGit";
+    imgGit.src = github.avatar_url;
+    return fetch("https://api.github.com/users/Alexgiur/repos");
+  })
+  .then((response) => response.json())
+  .then((github) => {
+    const repos = document.createElement("div");
+    document.getElementById("cv").appendChild(repos);
+    repos.id = "repos";
+    github.forEach((repo) => {
+      repos.innerHTML += "<br>" + repo.name;
+    });
   });
 
 function afficherCV(profil) {
