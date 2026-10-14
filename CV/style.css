@@ -1,0 +1,29 @@
+#title {
+    display: flex;
+    justify-content: center;
+}
+
+#subtitle {
+    display: flex;
+    justify-content: center;
+}
+
+#infos {
+    display: flex;
+    background-color: red;
+    float: left;
+    margin: 15px; 
+}
+
+#summary {
+    display: flex;
+    background-color: yellow;
+    justify-content: center;
+}
+
+#skills {
+    display: block;
+    float: left;
+    background-color: lightblue;
+    margin: 15px;
+}
