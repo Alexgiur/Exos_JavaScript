@@ -27,3 +27,9 @@
     background-color: lightblue;
     margin: 15px;
 }
+
+#ressources {
+    display: flex;
+    justify-content: center;
+    background-color: blueviolet;
+}

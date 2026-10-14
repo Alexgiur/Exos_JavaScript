@@ -2,6 +2,6 @@
     "nom": "Alexandre G.",
     "poste": "Développeur Web Full Stack",
     "infos": "Age = 24 ans",
-    "compétences": ["HTML", "CSS", "Php", "JavaScript"],
-    "expériences": "Dev chez moi"
+    "competences": ["HTML", "CSS", "Php", "JavaScript"],
+    "experiences": "Dev chez moi"
 }
