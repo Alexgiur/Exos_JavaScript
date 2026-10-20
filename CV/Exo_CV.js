@@ -32,7 +32,7 @@ fetch("profil.json")
             repos.style.display = "none";
 
             github.forEach((repo) => {
-              repos.innerHTML += "<br>" + repo.name;
+              repos.innerHTML += "<br><b>" + repo.name + "</b> : " + repo.svn_url;
             });
 
             btnRepos.addEventListener("click", () => {

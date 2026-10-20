@@ -1,11 +1,11 @@
 {
     "nom": "Alexandre G.",
     "poste": "Développeur Web Full Stack",
-    "infos": "Age = 24 ans",
-    "competences": ["HTML", "CSS", "Php", "JavaScript"],
+    "infos": ["<b>Age</b>: 24 ans", " <b>Adresse mail</b>: alxntm@gmail.com"],
+    "competences": ["HTML", "CSS", "Php", "JavaScript", "Java"],
     "experiences": [
         "<b>Stage développeur Web - LA HALLE GOURMANDE</b> (Du 8/01/2026 au 13/02/2026 à La Verpillière)<br>Administration du site vitrine de l'entreprise et création développement de l'image de marque.",
         "<b>Stage administrateur réseau - Mon Premier PC</b> (Du 2/06/2025 au 4/07/2025 à Lyon)<br>Administration réseau, rédaction de documentations, configuration de routeurs/switchs et hyperviseurs."
     ],
-    "logiciels": ["Suite Office", "Audacity", "IntelliJ", "VirtualBox", "Packet Tracer", "Wordpress", "PfSense", "Proxmox"]
+    "logiciels": ["Suite Office", " Audacity", " IntelliJ", " VirtualBox", " Packet Tracer", " Wordpress", " PfSense", " Proxmox"]
 }

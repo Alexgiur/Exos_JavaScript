@@ -3,7 +3,7 @@
     margin: 20px auto;
     font-family: Arial, sans-serif;
     position: relative;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 #title {
@@ -35,8 +35,9 @@
 #infos {
     display: inline-block;
     background-color: red;
-    margin: 15px; 
+    margin-bottom: 15px; 
     padding: 10px;
+    
 }
 
 #summary::before {
@@ -63,22 +64,17 @@
     font-weight: bold;
     margin-bottom: 10px;
     text-decoration: underline;
-    margin-left: -20px; 
 }
 
 #skills {
     display: block;
     float: left;
     background-color: lightblue;
-    margin: 15px;
-}
-
-#repos {
-    background-color: orange;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-top: 0;
     padding: 15px;
-    margin: 15px;
-    text-align: left;
-    overflow: hidden;
+    list-style-position: inside;
 }
 
 #repos::before {
@@ -88,6 +84,14 @@
     font-weight: bold;
     margin-bottom: 15px;
     text-decoration: underline;
+}
+
+#repos {
+    background-color: orange;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    overflow: hidden;
 }
 
 #ressources::before {
@@ -102,7 +106,8 @@
 #ressources {
     text-align: center;
     background-color: blueviolet;
-    padding: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
     overflow: hidden;
     text-align: left;
 }
@@ -130,7 +135,7 @@
     color: white;
     border: none;
     padding: 10px 20px;
-    margin: 15px; 
+    margin-bottom: 15px; 
     font-size: 1.1em;
     border-radius: 5px;
     cursor: pointer;
