@@ -37,10 +37,10 @@ fetch("profil.json")
 
             btnRepos.addEventListener("click", () => {
               if (repos.style.display === "none") {
-                repos.style.display = "block"; // On l'affiche
-                btnRepos.textContent = "Masquer les Dépôts GitHub"; // On change le texte
+                repos.style.display = "block"; 
+                btnRepos.textContent = "Masquer les Dépôts GitHub"; 
               } else {
-                repos.style.display = "none"; // On le cache
+                repos.style.display = "none"; 
                 btnRepos.textContent = "Afficher les Dépôts GitHub";
               }
             });
