@@ -21,11 +21,28 @@ fetch("profil.json")
         fetch("https://api.github.com/users/Alexgiur/repos")
           .then((response) => response.json())
           .then((github) => {
+            const btnRepos = document.createElement("button");
+            btnRepos.id = "btn-repos";
+            btnRepos.textContent = "Afficher les Dépôts GitHub";
+            document.getElementById("cv").appendChild(btnRepos); 
+
             const repos = document.createElement("div");
             document.getElementById("cv").appendChild(repos);
             repos.id = "repos";
+            repos.style.display = "none";
+
             github.forEach((repo) => {
               repos.innerHTML += "<br>" + repo.name;
+            });
+
+            btnRepos.addEventListener("click", () => {
+              if (repos.style.display === "none") {
+                repos.style.display = "block"; // On l'affiche
+                btnRepos.textContent = "Masquer les Dépôts GitHub"; // On change le texte
+              } else {
+                repos.style.display = "none"; // On le cache
+                btnRepos.textContent = "Afficher les Dépôts GitHub";
+              }
             });
         });
       });
@@ -56,6 +73,11 @@ function afficherCV(profil) {
   cv.appendChild(infos);
   infos.id = "infos";
   infos.innerHTML = profil.infos;
+
+  const logiciels = document.createElement("div");
+  cv.appendChild(logiciels);
+  logiciels.id = "logiciels";
+  logiciels.innerHTML = profil.logiciels;
 
   const summary = document.createElement("div");
   cv.appendChild(summary);
