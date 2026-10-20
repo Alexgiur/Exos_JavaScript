@@ -11,7 +11,7 @@ fetch("profil.json")
         const ressources = document.createElement("div");
         ressources.id = "ressources";
         document.getElementById("cv").appendChild(ressources);
-        ressources.textContent = github.login;
+        ressources.textContent = github.html_url;
 
         const imgGit = document.createElement("img");
         document.getElementById("cv").appendChild(imgGit);
@@ -60,7 +60,7 @@ function afficherCV(profil) {
   const summary = document.createElement("div");
   cv.appendChild(summary);
   summary.id = "summary";
-  summary.innerHTML = profil.experiences;
+  summary.innerHTML = profil.experiences.join('<br><br>');
 
   const skills = document.createElement("ul");
   cv.appendChild(skills);

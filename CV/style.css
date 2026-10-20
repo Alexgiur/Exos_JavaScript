@@ -30,11 +30,31 @@
     padding: 10px;
 }
 
+#summary::before {
+    content: "Expériences Professionnelles";
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
 #summary {
-    display: flex;
+    display: block;
     background-color: yellow;
-    justify-content: center;
     margin-bottom: 15px;
+    padding: 15px;
+    text-align: left;
+}
+
+#skills::before {
+    content: "Compétences";
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    margin-left: -20px; 
 }
 
 #skills {
@@ -48,11 +68,37 @@
     background-color: orange;
     padding: 15px;
     margin: 15px;
-    text-align: center;
+    text-align: left;
+    overflow: hidden;
+}
+
+#repos::before {
+    content: "Dépôts GitHub";
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+#ressources::before {
+    content: "Lien Github";
+    display: block;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-decoration: underline;
 }
 
 #ressources {
     text-align: center;
     background-color: blueviolet;
     padding: 10px;
+    overflow: hidden;
+    text-align: left;
 }
+
+
+
+
+
