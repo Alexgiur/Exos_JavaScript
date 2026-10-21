@@ -5,19 +5,17 @@ function sayHello(): void {
 sayHello()
 
 class Animal {
-    makesound(): void {
-        console.log("Meuuuuh")
+    makesound(): string {
+        return "Meuuuuh"
     }
 }
 
 class Chat extends Animal {
-    makesound(): void {
-        console.log("Miaouuuu !")
+    makesound(): string {
+        return "Miaouuuu !"
     } 
 }
 
-const animal = new Animal();
-animal.makesound();
-
-const chat = new Chat();
-chat.makesound();
+document.getElementById("btn")!.onclick = () => {
+  alert(new Chat().makesound());
+};

@@ -1,21 +1,19 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function sayHello() {
     console.log("Hello, TypeScript !");
 }
 sayHello();
 class Animal {
     makesound() {
-        console.log("Meuuuuh");
+        return "Meuuuuh";
     }
 }
 class Chat extends Animal {
     makesound() {
-        console.log("Miaouuuu !");
+        return "Miaouuuu !";
     }
 }
-const animal = new Animal();
-animal.makesound();
-const chat = new Chat();
-chat.makesound();
+document.getElementById("btn").onclick = () => {
+    alert(new Chat().makesound());
+};
+export {};
 //# sourceMappingURL=main.js.map
