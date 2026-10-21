@@ -1,9 +1,8 @@
 fetch("profil.json")
   .then((response) => response.json())
   .then((json) => {
-    
     afficherCV(json);
-    
+
     // bla bla bla
     fetch("https://api.github.com/users/Alexgiur")
       .then((response) => response.json())
@@ -17,14 +16,14 @@ fetch("profil.json")
         document.getElementById("cv").appendChild(imgGit);
         imgGit.id = "imgGit";
         imgGit.src = github.avatar_url;
-        
+
         fetch("https://api.github.com/users/Alexgiur/repos")
           .then((response) => response.json())
           .then((github) => {
             const btnRepos = document.createElement("button");
             btnRepos.id = "btn-repos";
             btnRepos.textContent = "Afficher les Dépôts GitHub";
-            document.getElementById("cv").appendChild(btnRepos); 
+            document.getElementById("cv").appendChild(btnRepos);
 
             const repos = document.createElement("div");
             document.getElementById("cv").appendChild(repos);
@@ -32,23 +31,29 @@ fetch("profil.json")
             repos.style.display = "none";
 
             github.forEach((repo) => {
-              repos.innerHTML += "<br><b>" + repo.name + "</b> : " + repo.svn_url;
+              const lien = document.createElement("a");
+              lien.href = repo.html_url;
+              lien.target = "_blank";
+              lien.textContent = repo.name;
+              repos.appendChild(lien);
             });
 
             btnRepos.addEventListener("click", () => {
               if (repos.style.display === "none") {
-                repos.style.display = "block"; 
-                btnRepos.textContent = "Masquer les Dépôts GitHub"; 
+                repos.style.display = "grid";
+                btnRepos.textContent = "Masquer les Dépôts GitHub";
+                btnRepos.classList.add("ouvert");
+                repos.prepend(btnRepos); 
               } else {
-                repos.style.display = "none"; 
+                repos.style.display = "none";
                 btnRepos.textContent = "Afficher les Dépôts GitHub";
+                btnRepos.classList.remove("ouvert");
+                repos.before(btnRepos);
               }
             });
-        });
+          });
       });
   });
-
-
 
 function afficherCV(profil) {
   const cv = document.createElement("div");
@@ -82,7 +87,7 @@ function afficherCV(profil) {
   const summary = document.createElement("div");
   cv.appendChild(summary);
   summary.id = "summary";
-  summary.innerHTML = profil.experiences.join('<br><br>');
+  summary.innerHTML = profil.experiences.join("<br><br>");
 
   const skills = document.createElement("ul");
   cv.appendChild(skills);
